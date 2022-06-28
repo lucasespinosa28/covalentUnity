@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityEditor;
 
 [ExecuteInEditMode]
 public class CovalentNft : MonoBehaviour
@@ -18,9 +17,13 @@ public class CovalentNft : MonoBehaviour
         Data.Apikey = Apikey;
     }
 
-    public void PreviewNft()
+    public void PreviewNft(Enumeration.ChainId _chainId = Enumeration.ChainId.EthereumMainnet, string _contractAddress = "", int _tokenId = 0)
     {
-        var uri = ParseUrl.NFTExternalMetadata(chainId, contractAddress, tokenId);
+        if(chainId != _chainId) _chainId = chainId;
+        if(tokenId != _tokenId) _tokenId = tokenId;
+        if(contractAddress != _contractAddress) _contractAddress = contractAddress;
+
+        var uri = ParseUrl.NFTExternalMetadata(_chainId, _contractAddress, _tokenId);
         if (uri.Item1)
         {
             StartCoroutine(GetRequest(uri.Item2));
