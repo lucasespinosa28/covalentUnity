@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 using UnityEditor;
 
 [ExecuteInEditMode]
-public class NftMetadata : MonoBehaviour
+public class CovalentNft : MonoBehaviour
 {
     public string Apikey = Data.Apikey;
     [SerializeField] Enumeration.ImageSize imageSize;
