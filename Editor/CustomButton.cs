@@ -2,13 +2,13 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(GetNftMetadata))]
+[CustomEditor(typeof(NftMetadata))]
 public class CustomButton : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
-        GetNftMetadata e = (GetNftMetadata)target;
+        NftMetadata e = (NftMetadata)target;
         if (GUILayout.Button("Preview"))
         {
             e.PreviewNft();
