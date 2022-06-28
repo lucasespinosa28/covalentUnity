@@ -1,6 +1,6 @@
 {
   "name": "com.lucky.covalent-unity",
-  "version": "1.2.3",
+  "version": "0.1.0-alpha",
   "displayName": "Covalent Unity",
   "description": "Plugin to Unity that let you import NFT's metadata using Covalent Api",
   "unity": "2019.1",
